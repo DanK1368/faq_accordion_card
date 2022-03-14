@@ -18,8 +18,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Click Here](https://dank1368.github.io/faq_accordion_card/)
 
 ## My process
 
@@ -31,10 +30,10 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ### What I learned
 
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+- Mobile first approach
+- Continuing to improve the use of SASS with partials
+- Working with the DOM in JS, manipulating elements and inserting classes during click events
+- Although I'm not sure if this is the right approach, but since certain elements needed
+  to be changed during a click event, while others not, I made use of a filtered array to achieve this.
