@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #af67e9, #6565e7);
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+button {
+  color: #4a4b5e;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.faq {
+  width: 327px;
+  height: 535px;
+  background: white;
+  border-radius: 23px;
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+@media only screen and (min-width: 600px) {
+  .faq {
+    min-width: 550px;
+  }
+}
+@media only screen and (min-width: 860px) {
+  .faq {
+    width: 920px;
+    height: 505px;
+    place-content: center end;
+    padding-right: 10rem;
+    overflow: hidden;
+  }
+}
+.faq__heading {
+  text-align: center;
+  padding-top: 13rem;
+}
+@media only screen and (min-width: 860px) {
+  .faq__heading {
+    text-align: left;
+    padding: 0;
+  }
+}
+.faq__container {
+  padding-inline: 2rem;
+  min-height: 370px;
+}
+@media only screen and (min-width: 600px) {
+  .faq__container {
+    max-width: 350px;
+  }
+}
+@media only screen and (min-width: 860px) {
+  .faq__container {
+    min-width: 390px;
+    max-height: 298px;
+    padding-inline: 0;
+  }
+}
+.faq__question {
+  position: relative;
+}
+.faq__question::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: #e7e7e9;
+  position: absolute;
+  bottom: 0;
+}
+.faq__btn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 2rem 0.5rem;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq__btn:hover {
+  color: #f47c57;
+}
+.faq__icon {
+  padding-left: 3rem;
+  cursor: pointer;
+}
+@media only screen and (min-width: 860px) {
+  .faq__icon {
+    padding-left: 10rem;
+  }
+}
+.faq__answer-text {
+  display: block;
+  color: #787887;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+.faq__answer-text::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: #e7e7e9;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+.faq__answer-container {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+.active p {
+  -webkit-animation: entrance 0.3s ease-in-out;
+          animation: entrance 0.3s ease-in-out;
+}
+
+@-webkit-keyframes entrance {
+  from {
+    transform: translateY(-20%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes entrance {
+  from {
+    transform: translateY(-20%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.open::after {
+  display: none;
+}
+.open button {
+  font-weight: 700;
+}
+.open img {
+  transform: rotateX(180deg);
+  transition: transform 0.3s linear;
+}
+
+.illustration-mobile {
+  width: 237px;
+  height: 180px;
+  position: absolute;
+  z-index: 1;
+  top: -20%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 860px) {
+  .illustration-mobile {
+    display: none;
+  }
+}
+
+.illustration-desktop {
+  display: none;
+}
+@media only screen and (min-width: 860px) {
+  .illustration-desktop {
+    display: block;
+    width: 458px;
+    height: 371px;
+    position: absolute;
+    z-index: 1;
+    left: -85px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    overflow-x: hidden;
+  }
+}
+
+main {
+  position: relative;
+}
+
+.illustration-box {
+  display: none;
+}
+@media only screen and (min-width: 860px) {
+  .illustration-box {
+    display: block;
+    position: absolute;
+    left: -120px;
+    top: 130px;
+    bottom: 0;
+    margin: auto 0;
+    z-index: 5;
+  }
+}
+
+.bg-pattern-mobile {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 860px) {
+  .bg-pattern-mobile {
+    display: none;
+  }
+}
+
+.bg-pattern-desktop {
+  display: none;
+}
+@media only screen and (min-width: 860px) {
+  .bg-pattern-desktop {
+    display: block;
+    position: absolute;
+    top: -53%;
+    left: -60%;
+  }
+}
+
+body {
+  display: grid;
+  place-content: center;
+}/*# sourceMappingURL=main.css.map */

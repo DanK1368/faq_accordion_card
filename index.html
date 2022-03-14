@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+  </head>
+  <body>
+    <main>
+      <img
+        class="illustration-box"
+        src="assets/illustration-box-desktop.svg"
+        alt=""
+      />
+      <section class="faq">
+        <img
+          class="illustration-mobile"
+          src="assets/illustration-woman-online-mobile.svg"
+          alt=""
+        />
+        <img
+          class="illustration-desktop"
+          src="assets/illustration-woman-online-desktop.svg"
+          alt=""
+        />
+        <img
+          class="bg-pattern-mobile"
+          src="assets/bg-pattern-mobile.svg"
+          alt=""
+        />
+        <img
+          class="bg-pattern-desktop"
+          src="assets/bg-pattern-desktop.svg"
+          alt=""
+        />
+        <img src="" alt="" />
+        <h1 class="faq__heading">FAQ</h1>
+        <div class="faq__container">
+          <h2 class="faq__question">
+            <button
+              class="faq__btn"
+              aria-expanded="false"
+              aria-controls="sect1"
+              id="quest1id"
+            >
+              How many team members can I invite?
+              <img class="faq__icon" src="assets/icon-arrow-down.svg" alt="" />
+            </button>
+          </h2>
+          <div
+            class="faq__answer-container"
+            id="sect1"
+            role="region"
+            aria-labelledby="quest1id"
+          >
+            <p class="faq__answer-text active">
+              You can invite up to 2 additional users on the Free plan. There is
+              no limit on team members for the Premium plan.
+            </p>
+          </div>
+
+          <h2 class="faq__question">
+            <button
+              class="faq__btn"
+              aria-expanded="false"
+              aria-controls="sect2"
+              id="quest2id"
+            >
+              What is the maximum file upload size?
+              <img class="faq__icon" src="assets/icon-arrow-down.svg" alt="" />
+            </button>
+          </h2>
+          <div
+            class="faq__answer-container"
+            id="sect2"
+            role="region"
+            aria-labelledby="quest2id"
+          >
+            <p class="faq__answer-text">
+              No more than 2GB. All files in your account must fit your allotted
+              storage space.
+            </p>
+          </div>
+
+          <h2 class="faq__question">
+            <button
+              class="faq__btn"
+              aria-expanded="false"
+              aria-controls="sect3"
+              id="quest3id"
+            >
+              How do I reset my password?
+              <img class="faq__icon" src="assets/icon-arrow-down.svg" alt="" />
+            </button>
+          </h2>
+          <div
+            class="faq__answer-container"
+            id="sect3"
+            role="region"
+            aria-labelledby="quest3id"
+          >
+            <p class="faq__answer-text">
+              Click “Forgot password” from the login page or “Change password”
+              from your profile page. A reset link will be emailed to you.
+            </p>
+          </div>
+
+          <h2 class="faq__question">
+            <button
+              class="faq__btn"
+              aria-expanded="false"
+              aria-controls="sect4"
+              id="quest4id"
+            >
+              Can I cancel my subscription?
+              <img class="faq__icon" src="assets/icon-arrow-down.svg" alt="" />
+            </button>
+          </h2>
+          <div
+            class="faq__answer-container"
+            id="sect4"
+            role="region"
+            aria-labelledby="quest4id"
+          >
+            <p class="faq__answer-text">
+              Yes! Send us a message and we’ll process your request no questions
+              asked.
+            </p>
+          </div>
+
+          <h2 class="faq__question">
+            <button
+              class="faq__btn"
+              aria-expanded="false"
+              aria-controls="sect5"
+              id="quest5id"
+            >
+              Do you provide additional support?
+              <img class="faq__icon" src="assets/icon-arrow-down.svg" alt="" />
+            </button>
+          </h2>
+          <div
+            class="faq__answer-container"
+            id="sect5"
+            role="region"
+            aria-labelledby="quest5id"
+          >
+            <p class="faq__answer-text">
+              Chat and email support is available 24/7. Phone lines are open
+              during normal business hours.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+@use "../abstracts" as *;
+
+.faq {
+  width: 327px;
+  height: 535px;
+  background: rgb(255, 255, 255);
+  border-radius: 23px;
+  position: relative;
+  display: grid;
+  place-content: center;
+
+  @include md {
+    min-width: 550px;
+  }
+
+  @include lg {
+    width: 920px;
+    height: 505px;
+    place-content: center end;
+    padding-right: 10rem;
+    overflow: hidden;
+  }
+
+  &__heading {
+    text-align: center;
+    padding-top: 13rem;
+
+    @include lg {
+      text-align: left;
+      padding: 0;
+    }
+  }
+
+  &__container {
+    padding-inline: 2rem;
+    min-height: 370px;
+
+    @include md {
+      max-width: 350px;
+    }
+
+    @include lg {
+      min-width: 390px;
+      max-height: 298px;
+      padding-inline: 0;
+    }
+  }
+
+  &__question {
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background: $light-grayish-blue;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 2rem 0.5rem;
+    font-weight: 400;
+    cursor: pointer;
+    @include flex(row, space-between, center);
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+
+  &__icon {
+    padding-left: 3rem;
+    cursor: pointer;
+
+    @include lg {
+      padding-left: 10rem;
+    }
+  }
+
+  &__answer-text {
+    display: block;
+    color: $dark-grayish-blue;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background: $light-grayish-blue;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+    }
+  }
+
+  &__answer-container {
+    display: none;
+  }
+}
+
+.active {
+  display: block;
+
+  p {
+    animation: entrance 0.3s ease-in-out;
+  }
+}
+
+@keyframes entrance {
+  from {
+    transform: translateY(-20%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.open {
+  &::after {
+    display: none;
+  }
+
+  button {
+    font-weight: 700;
+  }
+
+  img {
+    transform: rotateX(180deg);
+    transition: transform 0.3s linear;
+  }
+}

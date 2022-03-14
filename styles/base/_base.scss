@@ -1,0 +1,31 @@
+@use "../abstracts" as *;
+@use "./reset";
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+$main-font: "Kumbh Sans", sans-serif;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $main-font;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, $soft-violet, $soft-blue);
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+button {
+  color: $very-dark-grayish-blue;
+}
+
+p {
+  font-size: 1.2rem;
+}

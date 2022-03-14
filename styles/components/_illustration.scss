@@ -1,0 +1,73 @@
+@use "../abstracts" as *;
+
+.illustration-mobile {
+  width: 237px;
+  height: 180px;
+  position: absolute;
+  z-index: 1;
+  top: -20%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  @include lg {
+    display: none;
+  }
+}
+
+.illustration-desktop {
+  display: none;
+
+  @include lg {
+    display: block;
+    width: 458px;
+    height: 371px;
+    position: absolute;
+    z-index: 1;
+    left: -85px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    overflow-x: hidden;
+  }
+}
+
+main {
+  position: relative;
+}
+
+.illustration-box {
+  display: none;
+
+  @include lg {
+    display: block;
+    position: absolute;
+    left: -120px;
+    top: 130px;
+    bottom: 0;
+    margin: auto 0;
+    z-index: 5;
+  }
+}
+
+.bg-pattern-mobile {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  @include lg {
+    display: none;
+  }
+}
+
+.bg-pattern-desktop {
+  display: none;
+
+  @include lg {
+    display: block;
+    position: absolute;
+    top: -53%;
+    left: -60%;
+  }
+}
